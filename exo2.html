@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	$(function(){
+		$('#form').on('submit', function(){
+					$('input[type="text"]').each(function(){
+						var lol = $(this).attr('data-chocolat')
+						$('#msg span.'+lol).html($(this).val())
+
+					})
+
+					return false
+		})
+	})
+	</script>
+</head>
+<body>
+<form id="form" action="" >
+            <input type="text" data-chocolat="nom" id="fnHGom">
+            <input type="text" data-chocolat="prenom" id="fpreFREnom">
+            <input type="text" data-chocolat="mail" id="fmaFERil">
+            <input type="text" data-chocolat="tel" id="ftFREel">
+            <input type="text" data-chocolat="j" id="fFERj">
+            <input type="text" data-chocolat="m" id="fFERm">
+            <input type="text" data-chocolat="a" id="fFERa">
+            <input type="text" data-chocolat="address" id="faFRddress">
+            <input type="submit">
+        </form>
+        <div id="msg">
+            <p>Bonjour, je m'appelle <span class="nom"></span> <span class="prenom"></span>.<br/>Mail mail est <span class="mail"></span> et mon téléphone est <span class="tel"></span>.<br /><br />Ma date de naissance est <span class="j"></span>/<span class="m"></span>/<span class="a"></span>.<br /><br />Mon adresse est <span class="address"></span></p>
+        </div>
+	
+</body>
+</html>

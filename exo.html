@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+	<head>
+
+		<meta charset="UTF-8">
+
+		<title>Document</title>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+		<script>
+			$(function(){
+			var datas =[
+
+                {
+
+                    "id" : 139,
+
+                    "product" : "Chocolate",
+
+                    "price" : 29.34,
+
+                    "img" : "http://www.babelio.com/users/liste_Le-chocolat_5637.png"
+
+                },
+
+                {
+
+                    "id" : 149,
+
+                    "product" : "Orange",
+
+                    "price" : 9.34,
+
+                    "img" : "http://producemadesimple.ca/wp-content/uploads/2015/01/orange-web-1024x768.jpg"
+
+                },
+
+                {
+
+                    "id" : 159,
+
+                    "product" : "Dylan",
+
+                    "price" : 0.00,
+
+                    "img" : "http://www.objets-publicitaires-pro.com/images/objet-publicitaire/produit/large/canard-publicitaire-equitation-jaune.jpg"
+
+                }
+
+            ]
+            $.each(datas, function(key, values) {
+            $('body').append('<div class="product"></div>')
+            $.each(values, function(k,v){
+            	if (k== "img"){
+            		$(".product:last-child").append("<p> <img src="+v+"></p>")
+            		}else {
+             $(".product:last-child").append("<p>"+k+""+v+"</p>")
+
+         }
+	        })
+            })
+})
+		</script>
+
+		<style>
+			.active{
+
+				font-weight: bold;
+
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

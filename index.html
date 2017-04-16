@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+	$(function(){
+		 $('p.question').on('click', function(){
+			if(!$(this).hasClass('active')){
+				$('.active').removeClass('active').next().slideUp(2000, function(){
+
+				})
+				$(this).addClass('active').next().slideDown(1200, function(){
+
+				})
+		}
+	})
+		})
+	</script>
+	<style>
+	.active {
+		color:red;
+	}
+	.reponse{
+		display:none;
+		border:1px solid red;
+	}
+	.question {
+		border: 2px solid black;
+	}
+	</style>
+</head>
+<body>
+	<p class="question">Question 1</p>
+	<p class="reponse">Response de Q1</p>
+	<p class="question">Question 2</p>
+	<p class="reponse">Response de Q2</p>
+	<p class="question">Question 3</p>
+	<p class="reponse">Response de Q3</p>
+	<p class="question">Question 4</p>
+	<p class="reponse">Response de Q4</p>
+	<p class="question">Question 5</p>
+	<p class="reponse">Response de Q5</p>
+	
+</body>
+</html>
